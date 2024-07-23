@@ -1,0 +1,31 @@
+/* a {
+
+
+} */
+
+.btn-body{
+    text-decoration: none !important;
+    color: #d95132;
+    height: 45px;
+    width: 45px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: all 0.4s ease;
+    transform: scale(1.0);
+    background-color: #f8876d00 ;
+
+
+
+}
+
+.btn-body.active{
+    background-color: #f8876d5a ;
+    transform: scale(1.2);
+
+
+}
+
+
