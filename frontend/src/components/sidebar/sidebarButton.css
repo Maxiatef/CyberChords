@@ -5,7 +5,7 @@
 
 .btn-body{
     text-decoration: none !important;
-    color: #d95132;
+    color: #ca1313;
     height: 45px;
     width: 45px;
     align-items: center;
@@ -22,7 +22,7 @@
 }
 
 .btn-body.active{
-    background-color: #f8876d5a ;
+    background-color: #b363515a ;
     transform: scale(1.2);
 
 
