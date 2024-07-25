@@ -1,0 +1,68 @@
+.player-body {
+    width: 100%;
+    height: 44%;
+    display: flex;
+    margin: 3% 0%;
+}
+
+.player-left-body {
+    width: 37%;
+}
+
+.player-right-body {
+    width: 63%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center;
+}
+
+.song-title {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.song-artist {
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffffaa;
+    margin-bottom: 30px;
+}
+
+.player-right-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.song-duration {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.duration {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+    margin: 0;
+}
+
+.controls {
+    display: flex; /* Add this line to make controls display in a row */
+    gap: 10px; /* Add space between the buttons */
+    margin-top: 10px; /* Add space above the controls */
+}

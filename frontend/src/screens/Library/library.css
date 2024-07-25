@@ -13,21 +13,28 @@
     width: 15%;
     height: 35%;
     border-radius: 20px;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(56deg, rgba(0, 0, 0, 1) 0%, rgba(15, 11, 7, 1) 49%, rgb(184, 54, 25) 100%);
+    /* background: rgb(0, 0, 0);
+    background: linear-gradient(56deg, rgba(0, 0, 0, 1) 0%, rgba(15, 11, 7, 1) 49%, rgb(184, 54, 25) 100%); */
     color: #ffffff;
     margin-top: 50px;
     margin-bottom: 50px;
     margin-right: 30px;
-    margin-left: 10px;
+    margin-left: 30px;
     transition: all 0.5s ease;
     cursor: pointer;
+
+    /* From https://css.glass */
+background: rgba(0, 0, 0, 0.18);
+/* border-radius: 16px; */
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8.1px);
+-webkit-backdrop-filter: blur(8.1px);
 }
 
 .playlist-card:hover {
     transform: scale(1.1);
     transition: all 0.5s ease;
-    box-shadow: 0 0 25px #00000079;
+    box-shadow: 0 0 29px #000000;
 }
 
 .playlist-image {

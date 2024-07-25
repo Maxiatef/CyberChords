@@ -1,0 +1,43 @@
+.controls-wrapper {
+    display: flex;  /* Ensure controls are in a row */
+    width: 50%;
+    margin: 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.action-btn {
+    width: 40px;  /* Reduced width */
+    height: 40px; /* Reduced height */
+    border-radius: 50%; /* Make buttons circular */
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+}
+
+.action-btn:hover {
+    transform: scale(1.1);
+}
+
+.play-pause-btn {
+    width: 50px;  /* Reduced width */
+    height: 50px; /* Reduced height */
+    border-radius: 50%; /* Make button circular */
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+}
+
+.play-pause-btn:hover {
+    transform: scale(1.1);
+}

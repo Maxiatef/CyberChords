@@ -1,0 +1,25 @@
+circle {
+    transition: all 1s ease-in-out;
+    transform: rotate(93deg);
+    transform-origin: 50% 50%;
+}
+
+.progress-circle {
+
+    justify-content: center;
+    align-items: center;
+}
+
+image.active {
+    transform-origin: 50% 50%;
+    animation: rotation 30s linear infinite;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
