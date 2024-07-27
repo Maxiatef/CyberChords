@@ -1,9 +1,151 @@
-import React, { useState, useRef, useEffect } from "react";
-import "./audioPlayer.css";
-import Controls from "./controls";
-import ProgressCircle from "./progressCircle";
-import WaveAnimation from "./waveAnimation";
+import React, { useEffect, useState, useRef } from 'react';
+import './audioPlayer.css';
+import Controls from './controls';
+import ProgressCircle from './progressCircle';
+import WaveAnimation from './waveAnimation';
 
+// export default function AudioPlayer({
+//   currentTrack,
+//   currentIndex,
+//   setCurrentIndex,
+//   total,
+//   albumimg,
+// }) {
+//   const [isPlaying, setIsPlaying] = useState(true);
+//   const [trackProgress, setTrackProgress] = useState(0);
+//   const audioRef = useRef(new Audio(total[currentIndex]?.preview_url));
+//   const intervalRef = useRef();
+//   const isReady = useRef(false);
+//   const albumImage = albumimg;
+
+//   const { duration } = audioRef.current;
+
+//   const currentPercentage = duration ? (trackProgress / duration) * 100 : 0;
+
+//   const startTimer = () => {
+//     clearInterval(intervalRef.current);
+
+//     intervalRef.current = setInterval(() => {
+//       if (audioRef.current.ended) {
+//         handleNext();
+//       } else {
+//         setTrackProgress(audioRef.current.currentTime);
+//       }
+//     }, 1000);
+//   };
+
+//   useEffect(() => {
+//     console.log('Audio element src:', audioRef.current.src);
+//     if (audioRef.current.src) {
+//       if (isPlaying) {
+//         audioRef.current.play().catch(error => {
+//           console.error('Error playing audio:', error);
+//         });
+//         startTimer();
+//       } else {
+//         clearInterval(intervalRef.current);
+//         audioRef.current.pause();
+//       }
+//     } else {
+//       if (isPlaying) {
+//         audioRef.current = new Audio(total[currentIndex]?.preview_url);
+//         audioRef.current.play().catch(error => {
+//           console.error('Error playing audio:', error);
+//         });
+//         startTimer();
+//       } else {
+//         clearInterval(intervalRef.current);
+//         audioRef.current.pause();
+//       }
+//     }
+//   }, [isPlaying, currentIndex]);
+
+//   useEffect(() => {
+//     console.log('Current track index:', currentIndex);
+//     console.log('Total tracks:', total);
+//     console.log('Current track:', total[currentIndex]?.preview_url);
+
+//     if (audioRef.current) {
+//       audioRef.current.pause();
+//       clearInterval(intervalRef.current);
+//     }
+//     audioRef.current = new Audio(total[currentIndex]?.preview_url);
+//     setTrackProgress(audioRef.current.currentTime);
+//     if (isReady.current) {
+//       audioRef.current.play().catch(error => {
+//         console.error('Error playing audio:', error);
+//       });
+//       setIsPlaying(true);
+//       startTimer();
+//     } else {
+//       isReady.current = true;
+//     }
+//   }, [currentIndex]);
+
+//   useEffect(() => {
+//     console.log(currentTrack.name);
+//     return () => {
+//       if (audioRef.current) {
+//         audioRef.current.pause();
+//         clearInterval(intervalRef.current);
+//       }
+//     };
+//   }, []);
+
+//   const handleNext = () => {
+//     if (currentIndex < total.length - 1) {
+//       setCurrentIndex(currentIndex + 1);
+//     } else {
+//       setCurrentIndex(0);
+//     }
+//   };
+
+//   const handlePrev = () => {
+//     if (currentIndex - 1 < 0) {
+//       setCurrentIndex(total.length - 1);
+//     } else {
+//       setCurrentIndex(currentIndex - 1);
+//     }
+//   };
+
+//   const addZero = (n) => {
+//     return n > 9 ? "" + n : "0" + n;
+//   };
+
+//   const artists = currentTrack?.album?.artists.map(artist => artist.name) || [];
+
+//   return (
+//     <div className="player-body flex">
+//       <div className="player-left-body">
+//         <ProgressCircle
+//           percentage={currentPercentage}
+//           isPlaying={isPlaying}
+//           image={albumImage}
+//           size={300}
+//           color="#C96850"
+//         />
+//       </div>
+//       <div className="player-right-body flex">
+//         <p className="song-title">{total[currentIndex]?.name || 'No track selected'}</p>
+//         <p className="song-artist">{artists.join(" | ")}</p>
+//         <div className="player-right-bottom flex">
+//           <div className="song-duration flex">
+//             <p className="duration">0:{addZero(Math.round(trackProgress))}</p>
+//             <WaveAnimation isPlaying={isPlaying} />
+//             <p className="duration">0:30</p>
+//           </div>
+//           <Controls
+//             isPlaying={isPlaying}
+//             setIsPlaying={setIsPlaying}
+//             handleNext={handleNext}
+//             handlePrev={handlePrev}
+//             total={total}
+//           />
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
 export default function AudioPLayer({
   currentTrack,
   currentIndex,

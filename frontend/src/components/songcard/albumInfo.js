@@ -2,7 +2,7 @@ import React from 'react'
 import './albumInfo.css';
 
 export default function AlbumInfo({ album }) {
-    console.log("album info", album)
+    // console.log("album info", album)
     const artists = album?.artists.map((artist) => artist.name).join(', ');
     const albumTypeText = album?.album_type === 'album' ? 'an album' : 'a single';
     return (

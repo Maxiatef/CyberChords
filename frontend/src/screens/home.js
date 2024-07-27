@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Library from './Library/library';
-import Feed from './feed';
+import Feed from './feed/feed';
 import Trending from './trending';
 import Player from './Player/player';
 import Favorites from './favorites/favorites';
